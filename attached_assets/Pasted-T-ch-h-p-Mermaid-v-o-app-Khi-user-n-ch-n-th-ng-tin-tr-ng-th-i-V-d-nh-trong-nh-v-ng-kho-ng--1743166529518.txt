@@ -1,0 +1,43 @@
+Tích hợp Mermaid vào app 
+Khi user ấn chọn thông tin trạng thái (Ví dụ như trong ảnh vùng khoảng đỏ trong ảnh là ‘Đang xử lý’)
+Core_core_dynamic_workflows truyền id của workflows để vẽ sơ đồ bằng Mermaid
+
+
+Payload
+{
+    "data": {
+        "core_core_dynamic_workflows_by_pk": {
+            "description": null,
+            "id": "27f86159-0450-4731-82ff-e7a1d6b31413",
+            "name": "[OEE] Trạng thái thiết bị",
+            "organization_id": "8c96bdee-09ef-40ce-b1fa-954920e71efe",
+            "core_dynamic_workflow_transitions": [
+                {
+                    "from_status_id": "ba7065e8-330e-4f05-86ed-220aaae82443",
+                    "id": "53d6fda7-5c58-458a-9efe-2edb2ee22f31",
+                    "organization_id": "8c96bdee-09ef-40ce-b1fa-954920e71efe",
+                    "to_status_id": "3cca6fab-4a34-4bb9-9350-d85c2eb96f9a",
+                    "workflow_id": "27f86159-0450-4731-82ff-e7a1d6b31413",
+                    "form_id": "8b293d5e-bad7-40ff-a33e-aa47157a711e",
+                    "name": "CREATED",
+                    "core_dynamic_from_status": {
+                        "description": "",
+                        "id": "ba7065e8-330e-4f05-86ed-220aaae82443",
+                        "name": "To do",
+                        "organization_id": "8c96bdee-09ef-40ce-b1fa-954920e71efe",
+                        "__typename": "core_core_dynamic_statuses"
+                    },
+                    "core_dynamic_to_status": {
+                        "description": "",
+                        "id": "3cca6fab-4a34-4bb9-9350-d85c2eb96f9a",
+                        "name": "Hoàn thành",
+                        "organization_id": "8c96bdee-09ef-40ce-b1fa-954920e71efe",
+                        "__typename": "core_core_dynamic_statuses"
+                    },
+                    "__typename": "core_core_dynamic_workflow_transitions"
+                }
+            ],
+            "__typename": "core_core_dynamic_workflows"
+        }
+    }
+}

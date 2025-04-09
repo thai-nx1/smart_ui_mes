@@ -1,0 +1,49 @@
+  "data": {
+        "core_core_menu_records": [
+            {
+                "id": "62f5fd85-603c-494a-80aa-c4b47fff33bd",
+                "title": "Khiếu nại ABC",
+                "data": [
+                    {
+                        "id": "170462a2-d319-4bce-9a15-1f0297b12b84",
+                        "name": "Đây là Câu trả lời ngắn",
+                        "value": "mô tả ngắn",
+                        "field_type": "TEXT"
+                    },
+                    {
+                        "id": "fc4e865f-a398-480a-a2d6-4c249b06ae95",
+                        "name": "Đây là Đoạn Văn",
+                        "value": "mô tả đoạn văn",
+                        "field_type": "PARAGRAPH"
+                    },
+                    {
+                        "id": "8c176288-9448-4b1f-8517-9493ee7f25b1",
+                        "name": "Đây là Số nguyên",
+                        "value": 1000,
+                        "field_type": "PARAGRAPH"
+                    },
+                    {
+                        "id": "57b42f68-15ee-4e5a-bb50-e073fc968ca7",
+                        "name": "Đây là Single Choice",
+                        "value": "Lựa chọn 1",
+                        "field_type": "SINGLE_CHOICE"
+                    },
+                    {
+                        "id": "af12bdda-113a-43af-9ccb-9989b4d8c963",
+                        "name": "Đây là Multi Choice",
+                        "value": [
+                            "Lựa chọn A",
+                            "Lựa chọn B"
+                        ],
+                        "field_type": "MULTI_CHOICE"
+                    },
+                    {
+                        "id": "2103bcea-5c8a-4c40-8bfa-51d37e4a324a",
+                        "name": "Đây là DatePicker",
+                        "value": 1742896287000,
+                        "field_type": "DATE"
+                    }
+                ],
+                "created_at": "2025-03-28T01:52:10.196755",
+                "created_by": null
+            },

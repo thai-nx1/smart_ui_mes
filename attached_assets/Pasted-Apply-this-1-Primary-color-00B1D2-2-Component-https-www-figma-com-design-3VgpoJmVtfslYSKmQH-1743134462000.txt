@@ -1,0 +1,63 @@
+Apply this:
+1. Primary color #00B1D2
+2. Component: https://www.figma.com/design/3VgpoJmVtfslYSKmQHjKej/Oxii-Components?node-id=0-1&t=GWnCN9F5B0nBAhJz-1
+- Bottom app bars: node-id: 14:457
+- Top app bars: node-id: 14:393
+- Badges: 14:793
+- Buttons: node-id: 14:1847
+- Small FAB:: node-id: 14:1767
+- FAB: node-id: 14:1714
+- Large FAB: node-id: 14:1661
+- Extended FAB: node-id: 14:1592
+- Icon button: node-id: 14:1299
+- Icon button toggleable: 14:1380
+- Segmented button: node-id: 14:843
+- Segmented button (start): node-id: 14:919
+- Segmented button (middle): node-id: 14:1045
+- Segmented button (end): node-id: 14:1171
+- Stacked card: node-id: 14:2755
+- Horizontal card: node-id: 14:2765
+- Carousel: node-id: 14:3044
+- Carousel - Full screen: node-id: 14:3040
+- Chip groups: node-id: 14:4541
+- Input chip: node-id: 14:4331
+- Assistive chip: node-id: 14:4134
+- Filter chip: node-id: 14:3715
+- Suggestion chip: node-id: 14:3511
+- Model date picker: node-id: 14:12960
+- Input date picker: node-id: 14:12931
+- Docked input date picker [desktop]: node-id: 14:12818
+- Dial picker: node-id: 14:13592
+- Keyboard picker: node-id: 14:13653
+- Basic dialog: node-id: 14:18678
+- List dialog: node-id: 14:18701
+- Scollable list dialog: node-id: 14:18719
+- List: node-id: 14:38118
+- List-item: node-id: 14:35232
+- Menu: node-id: 14:47223
+- Navigation bar: node-id: 14:49727
+- Navigation drawer: node-id: 14:49381
+- Navigation Rail: node-id: 14:49258
+- Navigation bar for XR: node-id: 14:50198
+- Naviation rail for XR: node-id: 14:49760
+- Liner-determinate progress indicator: node-id: 14:51151
+- Liner-indeterminate progress indicator: node-id: 14:51122
+- Circular-determinate progress indicator: node-id: 14:51103
+- Circular-determinate progress indicator: node-id: 14:51095
+- Radio buttons: node-id: 14:51299
+- Search bar: node-id: 14:51462
+- Search view modal: node-id: 14:51416
+- Search view full-screen: node-id: 14:51370
+- Bottom sheet: node-id: 14:51966
+- Side sheet: node-id: 14:51907
+- Continuous slider: node-id: 14:52388
+- Discrete slider: node-id: 14:52332
+- Centered slider: node-id: 14:52256
+- Range Selection slider: node-id: 14:52158
+- Snackbars: node-id: 14:53103
+- Switch: node-id: 14:53225
+- Tabs: node-id: 14:53675
+- Text field: node-id: 14:54458
+- Rich tooltip action: node-id: 14:56397
+- Rich tooltip no action: node-id: 14:56396
+- Plain Tooltip: node-id: 14:56390

@@ -1,0 +1,58 @@
+/* CSS để đảm bảo sidebar không bị thu gọn trên desktop */
+@media (min-width: 768px) {
+  /* Đặt chiều rộng cố định cho sidebar */
+  [data-sidebar="sidebar"] {
+    width: 280px !important;
+    min-width: 280px !important;
+    max-width: 280px !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: none !important;
+    display: flex !important;
+    flex-shrink: 0 !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    bottom: 0 !important;
+    height: 100vh !important;
+    overflow-y: auto !important;
+    transition: none !important;
+    z-index: 30 !important;
+  }
+
+  /* Đặt margin-left cho content để không bị đè bởi sidebar */
+  [data-sidebar="sidebar"] + .flex-1 {
+    margin-left: 280px !important;
+  }
+
+  /* Đảm bảo nội dung không thu gọn */
+  [data-sidebar-content] {
+    width: 100% !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  /* Khôi phục animation chỉ trên mobile */
+  @media (max-width: 767px) {
+    [data-sidebar="sidebar"] {
+      transition: transform 0.3s ease, opacity 0.3s ease !important;
+    }
+  }
+
+  /* Đảm bảo các menu hiển thị đầy đủ */
+  [data-sidebar-menu-button] span {
+    overflow: visible !important;
+    text-overflow: initial !important;
+    white-space: normal !important;
+  }
+
+  /* Ẩn trigger button trên desktop */
+  [data-sidebar-trigger] {
+    display: none !important;
+  }
+
+  /* Overlay sidebar */
+  .sidebar-desktop-container {
+    position: relative !important;
+  }
+}

@@ -1,0 +1,79 @@
+Danh sách form   https://delicate-herring-66.hasura.app/v1/graphql limit 20
+offset 0
+
+Response: {
+    "data": {
+        "core_core_dynamic_forms": [
+            {
+                "id": "0aaa77d2-3f32-4983-9835-5b0d62992cec",
+                "name": "Form cho Luân",
+                "description": "",
+                "status": "ACTIVE",
+                "__typename": "core_core_dynamic_forms"
+            }
+        ]
+    }
+} 
+
+
+Dựa vào dữ liệu trên tạo danh sách form trong đó có danh sách field  dựa vào thông tin như    "name": "Đây là DatePicker",
+   "field_type": "DATE",
+Để tạo các field để input dữ liệu  lấy từ api trả về. response ui mobile and web  lỗi lần click vào form thì call api  Chi tiết mỗi form
+ https://delicate-herring-66.hasura.app/v1/graphql
+variables:  {id: "0aaa77d2-3f32-4983-9835-5b0d62992cec"}
+
+Response:
+{
+    "data": {
+        "core_core_dynamic_fields": [
+            {
+                "name": "Đây là Câu trả lời ngắn",
+                "id": "170462a2-d319-4bce-9a15-1f0297b12b84",
+                "field_type": "TEXT",
+                "description": null,
+                "status": "Active",
+                "__typename": "core_core_dynamic_fields"
+            },
+            {
+                "name": "Đây là Đoạn Văn",
+                "id": "fc4e865f-a398-480a-a2d6-4c249b06ae95",
+                "field_type": "PARAGRAPH",
+                "description": null,
+                "status": "Active",
+                "__typename": "core_core_dynamic_fields"
+            },
+            {
+                "name": "Đây là Số nguyên",
+                "id": "8c176288-9448-4b1f-8517-9493ee7f25b1",
+                "field_type": "NUMBER",
+                "description": null,
+                "status": "Active",
+                "__typename": "core_core_dynamic_fields"
+            },
+            {
+                "name": "Đây là Single Choice",
+                "id": "57b42f68-15ee-4e5a-bb50-e073fc968ca7",
+                "field_type": "SINGLE_CHOICE",
+                "description": null,
+                "status": "Active",
+                "__typename": "core_core_dynamic_fields"
+            },
+            {
+                "name": "Đây là Multi Choice",
+                "id": "af12bdda-113a-43af-9ccb-9989b4d8c963",
+                "field_type": "MULTI_CHOICE",
+                "description": null,
+                "status": "Active",
+                "__typename": "core_core_dynamic_fields"
+            },
+            {
+                "name": "Đây là DatePicker",
+                "id": "2103bcea-5c8a-4c40-8bfa-51d37e4a324a",
+                "field_type": "DATE",
+                "description": null,
+                "status": "Active",
+                "__typename": "core_core_dynamic_fields"
+            }
+        ]
+    }
+}  hiện thị đùng field và loại field trả về

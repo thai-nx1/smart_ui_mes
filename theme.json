@@ -1,0 +1,9 @@
+{
+  "variant": "professional",
+  "primary": "#00B1D2",
+  "appearance": "light",
+  "radius": 0.5,
+  "fontFamily": "Roboto",
+  "backgroundColor": "#FFFFFF",
+  "textColor": "#1F1F1F"
+}
