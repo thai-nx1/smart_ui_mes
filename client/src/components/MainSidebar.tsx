@@ -15,7 +15,7 @@ import {
   SidebarTrigger,
 } from '@/components/ui/sidebar';
 import { Button } from '@/components/ui/button';
-import { Menu, ChevronDown, Home, Settings, FormInput, ListChecks, Palette, Sun, Moon, Loader2, Search, X, Laptop, LogIn, LogOut, User } from 'lucide-react';
+import { Menu, ChevronDown, Home, Settings, FormInput, ListChecks, Palette, Sun, Moon, Loader2, Search, X, Laptop } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { fetchMainMenus, fetchAllMenus } from '@/lib/api';
 import { Menu as MenuType } from '@/lib/types';
@@ -24,70 +24,6 @@ import { cn } from '@/lib/utils';
 import { useScreenSize } from '@/hooks/use-mobile';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter, DialogClose } from "@/components/ui/dialog";
 import { ThemeType, ThemeStyle, themeManager } from '@/lib/theme';
-import { useAuth } from '@/context/AuthContext';
-
-// Authentication Button Component
-function AuthButton() {
-  const { t } = useTranslation();
-  const [, setLocation] = useLocation();
-  const { user, isAuthenticated, isLoading, logout } = useAuth();
-  
-  // Handle login button click
-  const handleLoginClick = () => {
-    setLocation('/login');
-  };
-  
-  // Handle logout button click
-  const handleLogoutClick = () => {
-    logout();
-  };
-  
-  if (isLoading) {
-    return (
-      <Button variant="ghost" size="sm" className="w-full justify-start" disabled>
-        <Loader2 className="h-4 w-4 mr-2 animate-spin" />
-        <span>{t('login.loading', 'Đang tải...')}</span>
-      </Button>
-    );
-  }
-  
-  if (isAuthenticated && user) {
-    return (
-      <div className="space-y-1">
-        <div className="px-3 py-1.5 flex items-center">
-          <div className="flex items-center justify-center w-7 h-7 rounded-full bg-primary/10 text-primary mr-2">
-            <User className="h-4 w-4" />
-          </div>
-          <div className="flex-1 min-w-0">
-            <p className="text-sm font-medium truncate">{user.username}</p>
-            <p className="text-xs text-muted-foreground truncate">{user.email}</p>
-          </div>
-        </div>
-        <Button 
-          variant="ghost" 
-          size="sm" 
-          className="w-full justify-start" 
-          onClick={handleLogoutClick}
-        >
-          <LogOut className="h-4 w-4 mr-2" />
-          <span>{t('login.logout', 'Đăng xuất')}</span>
-        </Button>
-      </div>
-    );
-  }
-  
-  return (
-    <Button 
-      variant="ghost" 
-      size="sm" 
-      className="w-full justify-start" 
-      onClick={handleLoginClick}
-    >
-      <LogIn className="h-4 w-4 mr-2" />
-      <span>{t('login.login', 'Đăng nhập')}</span>
-    </Button>
-  );
-}
 
 export function MainSidebar({ children }: { children: React.ReactNode }) {
   const { t } = useTranslation();
@@ -409,11 +345,7 @@ export function MainSidebar({ children }: { children: React.ReactNode }) {
             </SidebarGroup>
           </SidebarContent>
 
-          <div className="border-t border-sidebar-border bg-sidebar-accent/20 p-2 space-y-1">
-            {/* Authentication button */}
-            <AuthButton />
-            
-            {/* Theme button */}
+          <div className="border-t border-sidebar-border bg-sidebar-accent/20 p-2">
             <Button
               variant="ghost"
               size="sm"
@@ -609,7 +541,6 @@ function useOverlay() {
 }
 
 // Dynamic Menu Item Component
-
 function DynamicMenuItem({ menu }: { menu: MenuType }) {
   const [isOpen, setIsOpen] = useState(false);
   const [location] = useLocation();

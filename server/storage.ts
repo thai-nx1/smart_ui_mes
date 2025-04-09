@@ -6,7 +6,6 @@ import { users, type User, type InsertUser } from "@shared/schema";
 export interface IStorage {
   getUser(id: number): Promise<User | undefined>;
   getUserByUsername(username: string): Promise<User | undefined>;
-  getUserByEmail(email: string): Promise<User | undefined>;
   createUser(user: InsertUser): Promise<User>;
 }
 
@@ -28,26 +27,10 @@ export class MemStorage implements IStorage {
       (user) => user.username === username,
     );
   }
-  
-  async getUserByEmail(email: string): Promise<User | undefined> {
-    return Array.from(this.users.values()).find(
-      (user) => user.email === email,
-    );
-  }
 
   async createUser(insertUser: InsertUser): Promise<User> {
     const id = this.currentId++;
-    const now = new Date();
-    const user: User = { 
-      id,
-      username: insertUser.username,
-      password: insertUser.password || null,
-      email: insertUser.email || null,
-      sso_type: insertUser.sso_type || null,
-      sso_credentials: insertUser.sso_credentials || null,
-      created_at: now,
-      updated_at: now
-    };
+    const user: User = { ...insertUser, id };
     this.users.set(id, user);
     return user;
   }

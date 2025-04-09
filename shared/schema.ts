@@ -2,26 +2,16 @@ import { pgTable, text, serial, integer, boolean, jsonb, varchar, timestamp, uui
 import { createInsertSchema } from "drizzle-zod";
 import { z } from "zod";
 
-export type Json = any;
-
 // User schema
 export const users = pgTable("users", {
   id: serial("id").primaryKey(),
   username: text("username").notNull().unique(),
-  password: text("password"),
-  email: text("email").unique(),
-  sso_type: text("sso_type"),
-  sso_credentials: jsonb("sso_credentials"),
-  created_at: timestamp("created_at").defaultNow(),
-  updated_at: timestamp("updated_at").defaultNow(),
+  password: text("password").notNull(),
 });
 
 export const insertUserSchema = createInsertSchema(users).pick({
   username: true,
   password: true,
-  email: true,
-  sso_type: true,
-  sso_credentials: true,
 });
 
 export type InsertUser = z.infer<typeof insertUserSchema>;
@@ -36,7 +26,7 @@ export const FieldTypeEnum = z.enum([
 
 export type FieldType = z.infer<typeof FieldTypeEnum>;
 
-// Dynamic form schema
+
 export const forms = pgTable("forms", {
   id: uuid("id").primaryKey().notNull(),
   name: text("name").notNull(),
